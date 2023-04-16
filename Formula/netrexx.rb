@@ -11,6 +11,7 @@ class Netrexx < Formula
 
   def install
     ENV.deparallelize
+    (prefix/"lib").mkpath
     system "make"
     bin.install "bin/nrc" => "nrc"
     bin.install "bin/NetRexxC.sh" => "NetRexxC.sh"
@@ -22,10 +23,7 @@ class Netrexx < Formula
     bin.install "bin/pipe.bat" => "pipe.bat"
     bin.install "bin/pipc.bat" => "pipc.bat"
     bin.install "bin/nrws.bat" => "nrws.bat"
-    prefix.install "${buildpath}/build/lib/NetRexxF.jar" => "lib/NetRexxF.jar"
-    #cd "./build" do
-    #  system "make", "install"
-    #end
+    FileUtils.install Dir["#{buildpath}/build/lib/*.jar"], "#{prefix}/lib/"
   end
 
   test do
