@@ -12,7 +12,7 @@ class Netrexx < Formula
   def install
     ENV.deparallelize
     system "make"
-    bin.install "bin/nrc" ==> "nrc"
+    bin.install "bin/nrc" => "nrc"
     #cd "./build" do
     #  system "make", "install"
     #end
