@@ -22,7 +22,14 @@ class Netrexx < Formula
     bin.install "bin/pipc" => "pipc"
     bin.install "bin/pipe.bat" => "pipe.bat"
     bin.install "bin/pipc.bat" => "pipc.bat"
+    bin.install "bin/nrws" => "nrws"
     bin.install "bin/nrws.bat" => "nrws.bat"
+    chmod 0555, "#{bin}/nrc"
+    chmod 0555, "#{bin}/NetRexxC.sh"
+    chmod 0555, "#{bin}/nr"
+    chmod 0555, "#{bin}/pipe"
+    chmod 0555, "#{bin}/pipc"
+    chmod 0555, "#{bin}/nrws"
     FileUtils.install Dir["#{buildpath}/build/lib/*.jar"], "#{prefix}/lib/"
   end
 
