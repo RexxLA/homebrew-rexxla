@@ -22,7 +22,7 @@ class Netrexx < Formula
     bin.install "bin/pipe.bat" => "pipe.bat"
     bin.install "bin/pipc.bat" => "pipc.bat"
     bin.install "bin/nrws.bat" => "nrws.bat"
-    prefix.install "{$PREFIX}/build/lib/NetRexxF.jar" => "lib/NetRexxF.jar"
+    bin.install "build/lib/NetRexxF.jar" => "lib/NetRexxF.jar"
     #cd "./build" do
     #  system "make", "install"
     #end
