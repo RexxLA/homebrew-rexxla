@@ -1,4 +1,4 @@
-class NetRexx < Formula
+class Netrexx < Formula
   desc "NetRexx (The Rexx version for the Java Virtual Machine)"
   homepage "https://www.netrexx.org"
   url "https://www.netrexx.org/packages/netrexx-4.05-20230416.tar.gz"
