@@ -13,6 +13,15 @@ class Netrexx < Formula
     ENV.deparallelize
     system "make"
     bin.install "bin/nrc" => "nrc"
+    bin.install "bin/NetRexxC.sh" => "NetRexxC.sh"
+    bin.install "bin/nr" => "nr"
+    bin.install "bin/nrc.bat" => "nrc.bat"
+    bin.install "bin/NetRexxC.bat" => "NetRexxC.bat"
+    bin.install "bin/pipe" => "pipe"
+    bin.install "bin/pipc" => "pipc"
+    bin.install "bin/pipe.bat" => "pipe.bat"
+    bin.install "bin/pipc.bat" => "pipc.bat"
+    bin.install "bin/nrws.bat" => "nrws.bat"
     #cd "./build" do
     #  system "make", "install"
     #end
