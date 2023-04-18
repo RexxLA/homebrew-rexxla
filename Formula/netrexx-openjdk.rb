@@ -42,4 +42,14 @@ class NetrexxOpenjdk < Formula
     # chmod 0755, testpath/"test"
     # assert_match version.to_s, shell_output(testpath/"test")
   end
+
+  def caveats
+    on_macos do
+      <<~EOS
+      For running compiled NetRexx classes with java:
+        export CLASSPATH=$CLASSPATH:#{prefix}/lib/NetRexxF.jar
+	EOS
+    end
+  end
 end
+
