@@ -2,7 +2,7 @@ class Netrexx < Formula
   desc "netrexx (The Rexx variant for the Java Virtual Machine)"
   homepage "https://www.netrexx.org"
   url "https://www.netrexx.org/packages/netrexx-4.05-beta.tar.gz"
-  sha256 "91a9ebc00e6b19f599012bc5848118f2b9c706ebeb8ce660d6f19ba7519a632a"
+  sha256 "aef7baa1c7eab74178dfd02476821b8d12c7fc7fec395dcc2e940528c571f075"
   license "ICU"
 
 #  depends_on "make" => :build
