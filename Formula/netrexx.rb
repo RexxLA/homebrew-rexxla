@@ -10,7 +10,7 @@ class Netrexx < Formula
   def install
     ENV.deparallelize
     (prefix/"lib").mkpath
-    system "make"
+    system "make -f makefile.homebrew"
     bin.install "bin/nrc" => "nrc"
     bin.install "bin/NetRexxC.sh" => "NetRexxC.sh"
     bin.install "bin/nr" => "nr"
