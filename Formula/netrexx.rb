@@ -2,15 +2,16 @@ class Netrexx < Formula
   desc "netrexx (The Rexx variant for the Java Virtual Machine)"
   homepage "https://www.netrexx.org"
   url "https://www.netrexx.org/packages/netrexx-4.05-beta.tar.gz"
-  sha256 "aef7baa1c7eab74178dfd02476821b8d12c7fc7fec395dcc2e940528c571f075"
+  sha256 "e52990c8b4d53f456f22df3f881bbcfc2b03ea9b0ae9ccbd49a3db88872d372c"
   license "ICU"
 
 #  depends_on "make" => :build
 
   def install
     ENV.deparallelize
+    ENV["JAVA_HOME"] = Language::Java.java_home
     (prefix/"lib").mkpath
- #   system "make -f makefile.homebrew"
+    system "make -f makefile.homebrew"
     bin.install "bin/nrc" => "nrc"
     bin.install "bin/NetRexxC.sh" => "NetRexxC.sh"
     bin.install "bin/nr" => "nr"
