@@ -9,7 +9,7 @@ class Netrexx < Formula
 
   def install
     ENV.deparallelize
-    ENV["JAVA_HOME"] = Language::Java.java_home
+    ENV["JAVA_HOME"] = $JAVA_HOME
     (prefix/"lib").mkpath
     system "make -f makefile.homebrew"
     bin.install "bin/nrc" => "nrc"
