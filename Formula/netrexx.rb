@@ -5,12 +5,12 @@ class Netrexx < Formula
   sha256 "91d1bdd1f77bfb748ccd9aac205df228839ca2c03d35a0938c7cb069c4fb5e6d"
   license "ICU"
 
-  depends_on "make" => :build
+#  depends_on "make" => :build
 
   def install
     ENV.deparallelize
     (prefix/"lib").mkpath
-    system "make -f makefile.homebrew"
+ #   system "make -f makefile.homebrew"
     bin.install "bin/nrc" => "nrc"
     bin.install "bin/NetRexxC.sh" => "NetRexxC.sh"
     bin.install "bin/nr" => "nr"
