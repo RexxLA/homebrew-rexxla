@@ -1,8 +1,8 @@
 class NetrexxOpenjdk < Formula
   desc "netrexx (The Rexx variant for the Java Virtual Machine)"
   homepage "https://www.netrexx.org"
-  url "https://www.netrexx.org/packages/netrexx-4.05-beta.tar.gz"
-  sha256 "1458f2424ffe86e20b86fa8986a9a2034721b1cf1abe09888dba38d707b29e84"
+  url "https://www.netrexx.org/packages/netrexx-4.05-ga.tar.gz"
+  sha256 "01b475f7884ed605e397fc8668d3d8e7aae860701b2ddcad409e624a21f1ec79"
   license "ICU"
 
   depends_on "openjdk" => :build
